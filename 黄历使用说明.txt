@@ -1,0 +1,98 @@
+将文件解压在lib\example下
+*每次更新请使用命令
+#清理签文
+新建或清空文件，防止报错
+*文件夹enemies放在resourse文件夹下
+almanac/icon下可以只放box.png和bos_alpha.png,其余文件在第一次查询会自动下载，时间较长，请耐心等待
+
+需要安装python3.x
+3.11是测试版本，不稳定，且和pillow不兼容，不建议使用,推荐使用python3.8
+linux自带python2.7，需要安装3.8
+安卓可以通过命令pkg install python安装
+windows前往python官网下载：https://www.python.org/downloads/windows/
+安装教程：https://baijiahao.baidu.com/s?id=1708122987339952711&wfr=spider&for=pc
+
+python需要配置系统变量，windows安装python时勾选会自动配置
+在命令窗口输入python
+没有报错即可
+centos用如下命令配置环境变量，python3换成pip3配置一次
+升级教程：https://zhuanlan.zhihu.com/p/509213626
+目录换成相应目录
+ln -s /usr/local/python3/bin/python3 /usr/bin/python3
+
+
+若果是python2.7，有以下方法
+方法一
+请将python2.7卸载，安装python3.8
+方法二
+python2.7目录下的python重命名，保证输出为python3.8即可
+这种方法的pip需要使用pip3
+方法三
+修改js文件内的调用程序python为python3
+这种方法的pip需要使用pip3
+
+js需要安装如下库
+npm install node-schedule
+
+python需要安装以下库
+打开cmd，输入换源
+如果换将变量是pip3,则pip替换成pip3
+pip config set global.index-url http://mirrors.aliyun.com/pypi/simple/
+pip install pillow --trusted-host mirrors.aliyun.com
+pip install requests --trusted-host mirrors.aliyun.com
+pip install python-dateutil --trusted-host mirrors.aliyun.com
+pip install pytz --trusted-host mirrors.aliyun.com
+
+安装完后使用pip list
+即可查看已经安装的python库
+有上述库名即成功
+
+可以换成国内源
+# 阿里源
+pip config set global.index-url http://mirrors.aliyun.com/pypi/simple/
+
+# 豆瓣源
+pip config set global.index-url https://pypi.douban.com/simple
+
+# 阿里云 http://mirrors.aliyun.com/pypi/simple/
+# 科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+# 豆瓣(douban) http://pypi.douban.com/simple/
+# 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
+# 中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
+
+v1.8.3
+错误输出在控制台
+
+v1.8.2
+修复时区问题，优化日历界面，倒计时精确到秒
+
+v1.8
+新增塔罗牌，算命前请在心理默念想要计算的事情
+
+v1.6.10
+修复法师多出的掉落物
+亲，记得使用#清理签文哦
+
+v1.6.9
+修复众多bug,命令触发修复，日历时间修复
+增加小时倒计时
+
+v1.6.7
+新增2.7倒计时
+
+v1.6.5
+修复文件缺失
+
+v1.6.4
+修复返回无效图片bug，修复文件缺失报错bug
+
+v1.6.2
+修复乱码问题
+修复文件缺失报错问题
+
+v1.6.1
+溢出calendar文件夹
+黄历和倒计时合并
+
+v1.6
+新增活动、深境螺旋倒计时
