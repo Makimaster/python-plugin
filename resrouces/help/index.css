@@ -1,0 +1,95 @@
+body {
+  transform: scale(1);
+  width: 800px;
+  background: url("./theme/bg-01.jpg");
+}
+.container {
+  background: url(./theme/main-01.jpg) top left no-repeat;
+  background-size: 100% auto;
+  width: 800px;
+}
+.label {
+  font-family: Number, "微软雅黑", sans-serif;
+}
+.head-box {
+  margin: 200px 0 0 0;
+  padding-bottom: 0;
+}
+.head-box .title {
+  font-size: 60px;
+}
+.cont-box {
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  width: calc(100%);
+}
+
+.log-cont {
+  background-size: calc(100%);
+  margin: 0px 0px 00px -20px;
+  border-radius: 10px;
+}
+.log-conts {
+  background-size:calc(100%);;
+  margin: 0px 5px 0px 5px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: table-cell;
+  padding: 12px 0px 12px 50px;
+  line-height: 24px;
+  position: relative;
+  width: 33.33%;
+  text-align: left;
+}
+.help-group {
+  color: #ceb78b;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 0px 5px 30px;
+}
+.help-table {
+  text-align: center;
+  border-collapse: collapse;
+  margin: 5px 15px -10px 15px;
+  border-radius: 0 0 10px 10px;
+  display: table;
+  overflow: hidden;
+  width: calc(100%);
+  color: #fff;
+}
+.help-table .tr {
+  display: table-row;
+}
+.help-table .tr:last-child .td {
+  padding-bottom: 12px;
+}
+.help-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  background: url("icon.png") 0 0 no-repeat;
+  background-size: 500px auto;
+  border-radius: 5px;
+  left: 6px;
+  top: 12px;
+  transform: scale(0.85);
+}
+.help-title {
+  display: block;
+  color: #d3bc8e;
+  font-size: 16px;
+  line-height: 24px;
+  width: 200px;
+}
+.help-desc {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  color: #eee;
+  width: 200px;
+}
+/*# sourceMappingURL=index.css.map */

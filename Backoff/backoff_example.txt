@@ -1,0 +1,3 @@
+/lib/dealMsg.js
+/lib/app/dailyNote.js
+#这一行是注释，这俩文件不能修改
