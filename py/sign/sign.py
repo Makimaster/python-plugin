@@ -317,7 +317,6 @@ elif os.path.getsize(DATA_PATH/dataname)>0:
     with open(DATA_PATH/dataname,'r',encoding='utf-8')as f:
         abc=json.load(f)
         f.close()
-    print(abc)
     if str(qid) in abc:
         info=abc[str(qid)]
         #gold=abc['gold']

@@ -37,6 +37,7 @@ import {
   life1,
   life2,
   life3,
+  signlist,
   sign
 } from "./apps/life.js";
 import lodash from "lodash";
@@ -59,6 +60,7 @@ export {
   qingli,
   config,
   sign,
+  signlist,
   cailiao,
   tarot,
   tarot1,
@@ -101,6 +103,11 @@ let rule = {
     reg: "^签到$", //匹配消息正则，命令正则
 
     describe: "【#签到】进行签到", //【命令】功能说明
+  },
+  signlist: {
+    reg: "^签到排行$", //匹配消息正则，命令正则
+
+    describe: "【签到排行】查看总排行", //【命令】功能说明
   },
   food: {
     reg: "^#(食物).*$", //匹配消息正则，命令正则

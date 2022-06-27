@@ -44,8 +44,7 @@ for j in range(len(sh)):
      if not os.path.exists(GACHA_PATH/name1):
           abc=open(GACHA_PATH/name1,'w',encoding='utf-8')
           abc.close()
-     elif os.path.getsize(GACHA_PATH/name1)>0:
-          
+     elif os.path.getsize(GACHA_PATH/name1)>0:          
           with open(GACHA_PATH/name1,'r',encoding='utf-8')as f:
                abc=json.load(f)
                f.close()

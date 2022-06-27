@@ -138,3 +138,26 @@ export async function sign(e) {
   })
   return false;
 }
+export async function signlist(e) {
+  if (fs.existsSync(`./plugins/python-plugin/data/cfg.json`)) {
+    let cfg = JSON.parse(fs.readFileSync(`./plugins/python-plugin/data/cfg.json`, "utf8"));
+    if(cfg['签到']=='关闭'){return true;}
+  }
+  //console.log(e.nickname)
+  let command = "python ./plugins/python-plugin/py/sign/signlist.py";
+  var exec = require('child_process').exec;
+  var ls = exec(command, function (error, stdout, stderr){
+    if (error) {
+      console.log("失败！\nError code: "+error.code+"\n"+error.stack);
+    }else{
+      if (stdout.trim()=='error'){
+      e.reply("暂无签到信息")
+    }else{
+      let msg = [
+        segment.image(`file:///${_path}/plugins/python-plugin/resrouces/today_card/1.png`),
+        ];
+      e.reply(msg)
+    }}
+  })
+  return false;
+}
