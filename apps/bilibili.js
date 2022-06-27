@@ -34,7 +34,7 @@ export async function bilibilidingyue(e) {
     	}else{
     		let list = JSON.parse(fs.readFileSync(`${_path}//plugins/python-plugin/data/bilibili.json`, "utf8"));
     		let key=stdout.trim().toString();
-        	let name=list[key].uname
+        let name=list[key].uname
       	e.reply("订阅"+name+"成功")
         return false;
     }

@@ -150,7 +150,7 @@ export async function whitelist(e) {
       return true;
     }else{
       list= JSON.parse(fs.readFileSync(`./plugins/python-plugin/data/whitelist.json`, "utf8"));
-      e.reply(list)
+      e.reply(list.join(',').replace(/,/g,'\n'))
       return true;
     }
   }
@@ -168,4 +168,22 @@ export async function whitelist(e) {
   return true;
 }
 
+export async function whitelistdelete(e) {
+  if (!await checkAuth(e)) {
+    return true;
+  }
+  if (!fs.existsSync(`./plugins/python-plugin/data/whitelist.json`)) {return true;}
+  let list = JSON.parse(fs.readFileSync(`${_path}//plugins/python-plugin/data/whitelist.json`, "utf8"));
+  let gid=e.msg.match(/(\d+)/g)
+  if(!gid){return true;}
+  gid=gid[0].toString()
+  if(!list.includes(gid)){
+    e.reply("为推送群聊"+gid)
+    return true;
+  }
+  list.splice(list.indexOf(gid),1)
+  fs.writeFileSync("./plugins/python-plugin/data/whitelist.json", JSON.stringify(list, null, "\t"));
+  e.reply("每日60s推送移除群聊"+gid+"成功！")
+  return true;
+}
 

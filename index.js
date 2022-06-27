@@ -29,6 +29,7 @@ import {
   profileCfg,
   whitelist,
   qingli,
+  whitelistdelete,
   python_update
 } from "./apps/admin.js";
 import {
@@ -49,6 +50,7 @@ export {
   enemies_name,
   profileCfg,
   whitelist,
+  whitelistdelete,
   bilibililist,
   bilibilidelete,
   bilibilidingyue,
@@ -76,6 +78,10 @@ let rule = {
   profileCfg: {
     reg: "^#py设置(.*)$",
     describe: "【#py设置签到开启|关闭】开启关闭py功能",
+  },
+  whitelistdelete: {
+    reg: "^#推送移除(.*)$",
+    describe: "【#推送移除+群号】每日60s推送移除群聊，不支持私聊",
   },
   whitelist: {
     reg: "^#推送(.*)$",
@@ -174,7 +180,7 @@ let rule = {
   },
   life2: {
     reg: "^(选择).*$", //匹配消息正则，命令正则
-    describe: "【选择1,2,3】从十个天赋中选择四个", //【命令】功能说明
+    describe: "【选择1,2,3,4】从十个天赋中选择四个", //【命令】功能说明
   },
   life3: {
     reg: "^(分配).*$", //匹配消息正则，命令正则
@@ -211,10 +217,6 @@ let help_list=[{
     icon: 58,
     title: "自动清理",
     desc: "凌晨自动清理当天产生原魔、食物签到等文件，节省空间",
-  }, {
-    icon: 68,
-    title: "#护摩 #角斗士套",
-    desc: "查询武器/圣遗物大致信息",
   }]},
   {
     group:"命令",

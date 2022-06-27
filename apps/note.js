@@ -1,7 +1,6 @@
 import fetch from "node-fetch";
 import { segment } from "oicq";
 import {Note} from "../../xiaoyao-cvs-plugin/apps/Note.js";
-import { render } from "../../../lib/render.js";
 
 
 
