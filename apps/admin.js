@@ -178,7 +178,7 @@ export async function whitelistdelete(e) {
   if(!gid){return true;}
   gid=gid[0].toString()
   if(!list.includes(gid)){
-    e.reply("为推送群聊"+gid)
+    e.reply("未推送群聊"+gid)
     return true;
   }
   list.splice(list.indexOf(gid),1)
