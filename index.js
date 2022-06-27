@@ -10,6 +10,7 @@ import {
   tarot,
   tarot1  
 } from "./apps/huangli.js";
+import * as note from "./apps/note.js";
 import { currentVersion,changelogs } from "./apps/Updatelog.js";
 import {
   biaoQing,
@@ -43,6 +44,7 @@ export {
   qiuqian,
   jieqian,
   food,
+  note,
   enemies,
   enemies_name,
   profileCfg,
